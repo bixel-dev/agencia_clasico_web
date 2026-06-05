@@ -50,7 +50,8 @@ function CampaignCard({ c, onOpen }) {
     setPreviewing(false)
   }
 
-  const thumb = `https://i.ytimg.com/vi/${c.id}/hqdefault.jpg`
+  const thumb = `https://i.ytimg.com/vi/${c.id}/maxresdefault.jpg`
+  const thumbFallback = `https://i.ytimg.com/vi/${c.id}/hqdefault.jpg`
   const preview = `https://www.youtube-nocookie.com/embed/${c.id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${c.id}&modestbranding=1&showinfo=0&rel=0&playsinline=1`
 
   return (
@@ -64,7 +65,7 @@ function CampaignCard({ c, onOpen }) {
       onKeyDown={(e) => { if (e.key === 'Enter') onOpen(c) }}
       aria-label={title}
     >
-      <img className="campaign-thumb" src={thumb} alt={title} loading="lazy" />
+      <img className="campaign-thumb" src={thumb} alt={title} loading="lazy" onError={(e) => { e.target.src = thumbFallback }} />
       {previewing && (
         <div className="campaign-iframe-wrap">
           <iframe
