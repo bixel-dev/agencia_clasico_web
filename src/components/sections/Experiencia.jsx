@@ -1,15 +1,17 @@
+import { asset } from '../../utils/assets'
+
 const BRANDS = [
-  { name: 'BancoEstado',   src: '/assets/brands/bancoestado.svg',  h: 26 },
-  { name: 'TVN',           src: '/assets/brands/tvn.png',          h: 56 },
-  { name: 'Falabella',     src: '/assets/brands/falabella.svg',    h: 34 },
-  { name: 'Claro',         src: '/assets/brands/claro.png',        h: 60 },
-  { name: 'Shell',         src: '/assets/brands/shell.png',        h: 60 },
-  { name: 'Canal 13',      src: '/assets/brands/canal13.png',      h: 56 },
-  { name: 'Lollapalooza',  src: '/assets/brands/lolla.png',        h: 42 },
-  { name: 'Chery',         src: '/assets/brands/chery.png',        h: 46 },
-  { name: 'DUC',           src: '/assets/brands/cduc.jpg',         h: 58 },
-  { name: 'Upa!',          src: '/assets/brands/upa.png',          h: 48 },
-  { name: 'PC Factory',    src: '/assets/brands/pcfactory.webp',   h: 40, dark: true },
+  { name: 'BancoEstado',   src: asset('/assets/brands/bancoestado.svg'),  h: 26 },
+  { name: 'TVN',           src: asset('/assets/brands/tvn.png'),          h: 56 },
+  { name: 'Falabella',     src: asset('/assets/brands/falabella.svg'),    h: 34 },
+  { name: 'Claro',         src: asset('/assets/brands/claro.png'),        h: 60 },
+  { name: 'Shell',         src: asset('/assets/brands/shell.png'),        h: 60 },
+  { name: 'Canal 13',      src: asset('/assets/brands/canal13.png'),      h: 56 },
+  { name: 'Lollapalooza',  src: asset('/assets/brands/lolla.png'),        h: 42 },
+  { name: 'Chery',         src: asset('/assets/brands/chery.png'),        h: 46 },
+  { name: 'DUC',           src: asset('/assets/brands/cduc.jpg'),         h: 58 },
+  { name: 'Upa!',          src: asset('/assets/brands/upa.png'),          h: 48 },
+  { name: 'PC Factory',    src: asset('/assets/brands/pcfactory.webp'),   h: 40, dark: true },
 ]
 
 function Marquee({ items, reverse }) {

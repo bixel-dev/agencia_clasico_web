@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import TextRollButton from '../ui/TextRollButton'
 import { smoothTo } from '../../utils/navigation'
+import { asset } from '../../utils/assets'
 
 const HERO_PHRASES = [
   'El oficio de ayer',
@@ -41,7 +42,7 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        src="/assets/video/fondo_1920_1080_30fps.mp4"
+        src={asset('/assets/video/fondo_1920_1080_30fps.mp4')}
       />
       <div className="hero-body container">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginTop: 30, marginBottom: 32, opacity: 0.7 }}>
@@ -50,7 +51,7 @@ export default function Hero() {
         </div>
 
         <img
-          src="/assets/images/clasico-logo-dark.png"
+          src={asset('/assets/images/clasico-logo-dark.png')}
           alt="clasi.co"
           className="hero-logo"
         />

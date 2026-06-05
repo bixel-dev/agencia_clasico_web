@@ -1,9 +1,11 @@
+import { asset } from '../../utils/assets'
+
 export default function Wordmark({ size = 28, dark = false, mono = false, inline = true, className = '', style }) {
   const src = mono
-    ? '/assets/images/clasico-logo-mono.png'
+    ? asset('/assets/images/clasico-logo-mono.png')
     : dark
-      ? '/assets/images/clasico-logo-dark.png'
-      : '/assets/images/clasico-logo.png'
+      ? asset('/assets/images/clasico-logo-dark.png')
+      : asset('/assets/images/clasico-logo.png')
 
   const h = typeof size === 'number' ? size : undefined
   return (

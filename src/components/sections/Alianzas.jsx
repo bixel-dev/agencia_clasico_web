@@ -1,7 +1,9 @@
+import { asset } from '../../utils/assets'
+
 const PARTNERS = [
-  { name: 'Blackbird',       src: '/assets/partners/blackbird.png',    h: 52 },
-  { name: 'It sounds Dumb',  src: '/assets/partners/dumbstudio.webp',  h: 88 },
-  { name: 'The To-Do',       src: '/assets/partners/todo.png',         h: 70 },
+  { name: 'Blackbird',       src: asset('/assets/partners/blackbird.png'),    h: 52 },
+  { name: 'It sounds Dumb',  src: asset('/assets/partners/dumbstudio.webp'),  h: 88 },
+  { name: 'The To-Do',       src: asset('/assets/partners/todo.png'),         h: 70 },
 ]
 
 export default function Alianzas() {
