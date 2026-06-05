@@ -53,9 +53,8 @@ export default function Navbar({ dark }) {
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
               className="nav-wordmark"
               aria-label="Clasico — Inicio"
-              style={{ display: 'none' }}
             >
-              <Wordmark size={36} mono />
+              <Wordmark size={40} dark />
             </a>
 
             <button
