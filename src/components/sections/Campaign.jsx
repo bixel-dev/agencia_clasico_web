@@ -3,11 +3,11 @@ import { Play as PlayIcon, X as XIcon, ChevronLeft, ChevronRight } from '../ui/I
 
 const CAMPAIGNS = [
   { id: 'VXlwdegO5w4', featured: true },
+  { id: 'ZqT3SoRE6H0' },
   { id: 'Z--FArbBFGQ' },
   { id: '1IbAJkQ--tU' },
   { id: 'z3cqAGYUfiQ' },
   { id: 'LgafSY-G06I' },
-  { id: 'ZqT3SoRE6H0' },
   { id: 'OnOuXEa-uio' },
   { id: '7yQVkHBRv7Q' },
   { id: 'ebpi0Znn2G0' },

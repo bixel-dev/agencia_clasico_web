@@ -1,9 +1,9 @@
 import { asset } from '../../utils/assets'
 
 const BRANDS = [
-  { name: 'BancoEstado',   src: asset('/assets/brands/bancoestado.svg'),  h: 26 },
-  { name: 'TVN',           src: asset('/assets/brands/tvn.png'),          h: 56 },
-  { name: 'Falabella',     src: asset('/assets/brands/falabella.svg'),    h: 34 },
+  { name: 'BancoEstado',   src: asset('/assets/brands/marca-bancoestado.jpeg'), h: 72 },
+  { name: 'TVN',           src: asset('/assets/brands/tvn.png'),                  h: 56 },
+  { name: 'Falabella',     src: asset('/assets/brands/marca-falabella.jpeg'),     h: 72 },
   { name: 'Claro',         src: asset('/assets/brands/claro.png'),        h: 60 },
   { name: 'Shell',         src: asset('/assets/brands/shell.png'),        h: 60 },
   { name: 'Canal 13',      src: asset('/assets/brands/canal13.png'),      h: 56 },
