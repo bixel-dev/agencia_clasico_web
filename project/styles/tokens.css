@@ -1,0 +1,233 @@
+/* ============================================================
+   Clasico Design System — Foundations
+   Colors + Type tokens (CSS custom properties) for both raw
+   primitives and semantic mappings.
+   ============================================================ */
+
+/* ----- Fonts (Google Fonts substitutes — see README) -------- */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ---------- COLOR PRIMITIVES ---------- */
+
+  /* Neutrals — page surfaces, ink */
+  --ink-900:        #111111;          /* Logo black, headlines */
+  --ink-700:        #2A2A2A;
+  --ink-500:        #6B6B6B;          /* Body secondary */
+  --ink-300:        #9A9A9A;
+  --ink-200:        #D9D9D9;          /* Hairline borders */
+  --paper-100:      #EFEFEF;          /* Brand background gray */
+  --paper-50:       #F5F5F5;          /* Section gray */
+  --paper-0:        #FFFFFF;
+
+  /* Accent palette — pulled directly from logo variants */
+  --accent-orange:  #F26522;          /* "Featured" orange — primary CTA */
+  --accent-orange-deep: #E05A1A;      /* Hover state */
+  --accent-redorange: #FF5F03;        /* Shader / spot color */
+  --accent-green:   #2EE000;          /* Bracket green */
+  --accent-acid:    #CDE600;          /* Acid lime */
+  --accent-lavender:#8B82E3;          /* Soft lavender */
+
+  /* Soft tint (partner badge icon) */
+  --accent-coral:   #E8704E;
+
+  /* ---------- SEMANTIC COLOR ROLES ---------- */
+  --bg-page:        var(--paper-100);
+  --bg-section:     var(--paper-50);
+  --bg-card:        var(--paper-0);
+  --bg-inverse:     var(--ink-900);
+
+  --fg-primary:     var(--ink-900);
+  --fg-secondary:   var(--ink-500);
+  --fg-muted:       var(--ink-300);
+  --fg-inverse:     var(--paper-0);
+
+  --border-subtle:  var(--ink-200);
+  --border-strong:  var(--ink-900);
+
+  --cta-primary:        var(--accent-orange);
+  --cta-primary-hover:  var(--accent-orange-deep);
+  --cta-secondary:      var(--ink-900);
+  --link:               var(--ink-900);
+  --link-hover:         var(--ink-500);
+
+  /* ---------- TYPE PRIMITIVES ---------- */
+  /* Display serif — for the "cla.si." part of the wordmark and editorial display.
+     Substituted with DM Serif Display (closest free didone). */
+  --font-display-serif: "DM Serif Display", "Bodoni Moda", "Playfair Display", Georgia, serif;
+
+  /* Heavy geometric sans — for the "co." part of the wordmark and bold display.
+     Substituted with Archivo Black. */
+  --font-display-sans:  "Archivo Black", "Inter", system-ui, sans-serif;
+
+  /* Body — system stack (matches Axion landing brief exactly). */
+  --font-body:          -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                        Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Mono — for code, time, technical labels */
+  --font-mono:          ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* ---------- TYPE SCALE ---------- */
+  /* Fluid display sizes (mobile → desktop) */
+  --fs-display-xl:  clamp(2.5rem, 7vw, 4.2rem);   /* Hero h1 */
+  --fs-display-lg:  clamp(2rem, 5vw, 3.6rem);
+  --fs-display-md:  clamp(1.5rem, 4vw, 3.2rem);   /* Section h2 */
+  --fs-display-sm:  clamp(1.5rem, 3vw, 2rem);
+
+  --fs-h3:          1.5rem;     /* 24 */
+  --fs-h4:          1.25rem;    /* 20 */
+  --fs-body-lg:     1.0625rem;  /* 17 — paragraph hero */
+  --fs-body:        0.9375rem;  /* 15 — paragraph */
+  --fs-body-sm:     0.875rem;   /* 14 — small */
+  --fs-label:       0.8125rem;  /* 13 — nav, button, time */
+  --fs-micro:       0.75rem;    /* 12 — pill labels */
+  --fs-mono-sm:     0.6875rem;  /* 11 — badges, "AX" mark */
+
+  --lh-display:     1.08;       /* Hero */
+  --lh-heading:     1.12;       /* Section h2 */
+  --lh-body:        1.6;
+  --lh-prose:       1.65;
+
+  --tracking-tight: -0.03em;
+  --tracking-snug:  -0.02em;
+  --tracking-wide:  0.02em;
+
+  /* ---------- SPACING / RADII / SHADOWS ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  --radius-xs:  4px;     /* "Featured" badge */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;    /* Cards */
+  --radius-xl:  20px;    /* Sheets */
+  --radius-pill: 9999px; /* Everything pill — nav, buttons, badges */
+
+  --shadow-soft:    0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-soft-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.12);
+
+  /* ---------- MOTION ---------- */
+  --ease-clasico:   cubic-bezier(0.25, 0.1, 0.25, 1);   /* Default */
+  --ease-sheet:     cubic-bezier(0.32, 0.72, 0, 1);     /* Bottom sheets */
+  --duration-fast:  150ms;
+  --duration-med:   300ms;
+  --duration-long:  500ms;
+
+  /* ---------- CONTAINER ---------- */
+  --container-max:  1440px;
+  --container-px:   20px;     /* mobile */
+  --container-px-md: 32px;
+  --container-px-lg: 48px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   Apply these classnames OR use as element selectors.
+   ============================================================ */
+
+.cs-h1, h1.cs {
+  font-family: var(--font-display-serif);
+  font-size: var(--fs-display-xl);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-primary);
+  font-weight: 400; /* DM Serif Display is single-weight */
+}
+
+.cs-h2, h2.cs {
+  font-family: var(--font-display-serif);
+  font-size: var(--fs-display-md);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-primary);
+  font-weight: 400;
+}
+
+.cs-h3, h3.cs {
+  font-family: var(--font-body);
+  font-size: var(--fs-h3);
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--fg-primary);
+}
+
+.cs-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-primary);
+}
+
+.cs-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-primary);
+  font-weight: 500;
+}
+
+.cs-prose {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-prose);
+  color: var(--fg-primary);
+}
+
+.cs-meta {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  color: var(--fg-secondary);
+}
+
+.cs-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  letter-spacing: 0.04em;
+}
+
+.cs-wordmark-serif {
+  font-family: var(--font-display-serif);
+}
+.cs-wordmark-sans {
+  font-family: var(--font-display-sans);
+  text-transform: lowercase;
+}
+
+/* ============================================================
+   UTILITY: liquid-glass (defined in original brief; not heavily
+   used, but kept for parity with the codebase spec)
+   ============================================================ */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.liquid-glass::before {
+  content: "";
+  position: absolute; inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.05));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.liquid-glass-strong {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
