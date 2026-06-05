@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Play as PlayIcon, X as XIcon, ChevronLeft, ChevronRight } from '../ui/Icons'
 
 const CAMPAIGNS = [
-  { id: 'Z--FArbBFGQ', featured: true },
+  { id: 'VXlwdegO5w4', featured: true },
+  { id: 'Z--FArbBFGQ' },
   { id: '1IbAJkQ--tU' },
   { id: 'z3cqAGYUfiQ' },
   { id: 'LgafSY-G06I' },
@@ -10,7 +11,6 @@ const CAMPAIGNS = [
   { id: 'OnOuXEa-uio' },
   { id: '7yQVkHBRv7Q' },
   { id: 'ebpi0Znn2G0' },
-  { id: 'VXlwdegO5w4' },
   { id: 'PBARXU-XTrQ' },
 ]
 

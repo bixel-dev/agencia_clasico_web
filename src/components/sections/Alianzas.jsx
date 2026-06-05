@@ -1,9 +1,9 @@
 import { asset } from '../../utils/assets'
 
 const PARTNERS = [
-  { name: 'Blackbird',       src: asset('/assets/partners/blackbird.png'),    h: 52 },
-  { name: 'It sounds Dumb',  src: asset('/assets/partners/dumbstudio.webp'),  h: 88 },
-  { name: 'The To-Do',       src: asset('/assets/partners/todo.png'),         h: 70 },
+  { name: 'Blackbird',      src: asset('/assets/partners/blackbird.png'),   h: 52, url: 'https://blackbirds.studio/' },
+  { name: 'It sounds Dumb', src: asset('/assets/partners/dumbstudio.webp'), h: 88, url: 'https://www.dumb.studio/' },
+  { name: 'The To-Do',      src: asset('/assets/partners/todo.png'),        h: 70, url: 'https://www.thetodo.cl/' },
 ]
 
 export default function Alianzas() {
@@ -25,14 +25,21 @@ export default function Alianzas() {
 
         <div className="alianzas-grid">
           {PARTNERS.map((p) => (
-            <div key={p.name} className="alianza-cell">
+            <a
+              key={p.name}
+              className="alianza-cell"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={p.name}
+            >
               <img
                 src={p.src}
                 alt={p.name}
                 className="alianza-logo-img"
                 style={{ height: p.h }}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
